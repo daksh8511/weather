@@ -12,16 +12,33 @@ import { getTitle } from "./redux/WeatherContext";
 const App = () => {
   const [toggleBtn, setToggleBtn] = useState(false);
 
-  const [mytext, setMyText] = useState('')
+  const [mytext, setMyText] = useState("");
 
-  const myselector = useSelector((state)=> state.weather.title)
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    dispatch(getTitle(mytext))
+    e.preventDefault();
+    dispatch(getTitle(mytext));
+    setMyText("");
+  };
+
+  const handleCurrentLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success, error);
+    } else {
+      console.log("Not Woking!");
+    }
+  };
+
+  const success = (position) => {
+    const p = position.coords  
+    console.log(p)  
   }
-  
+
+  const error = () => {
+    console.log('error')
+  }
+
 
   return (
     <div
@@ -31,7 +48,10 @@ const App = () => {
     >
       <div className="container p-4 min-md:flex justify-between items-center">
         <Toggle toggleBtn={toggleBtn} setToggleBtn={setToggleBtn} />
-        <form onSubmit={handleSubmit} className="flex items-center gap-2 bg-[#ccc] p-2 rounded shadow-xl mb-3 min-md:m-0">
+        <form
+          onSubmit={handleSubmit}
+          className="flex items-center gap-2 bg-[#ccc] p-2 rounded shadow-xl mb-3 min-md:m-0"
+        >
           <IoSearchOutline />
           <input
             type="text"
@@ -41,7 +61,10 @@ const App = () => {
             onChange={(e) => setMyText(e.target.value)}
           />
         </form>
-        <div className="flex items-center gap-2 bg-[#ccc] p-2 rounded cursor-pointer shadow-xl">
+        <div
+          className="flex items-center gap-2 bg-[#ccc] p-2 rounded cursor-pointer shadow-xl"
+          onClick={handleCurrentLocation}
+        >
           <FaLocationCrosshairs />
           <h3>Current Location</h3>
         </div>
