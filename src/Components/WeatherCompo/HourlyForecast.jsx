@@ -5,15 +5,18 @@ import snowy from "/assets/Snowy.png";
 import rainy from "/assets/Rainy.png";
 import rainythunder from "/assets/RainThunder.png";
 import partcloudy from "/assets/PartlyCloudy.png";
+import { useSelector } from "react-redux";
 
 const HourlyForecast = () => {
   const apikey = "1f50012cda2bc9fadd21081223e5ebb9";
+  const selector = useSelector((state) => state.weather.title)
+  console.log(selector)
 
   const [data, setData] = useState(null);
 
   const fetchData = async () => {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?q=nairobi&appid=${apikey}`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${selector == "" ? "ahmedabad" : selector}&appid=${apikey}`
     );
     const final = await response.json();
     setData(final);
@@ -21,7 +24,7 @@ const HourlyForecast = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [selector]);
 
 
   return (
