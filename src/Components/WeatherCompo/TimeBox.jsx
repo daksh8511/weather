@@ -35,7 +35,7 @@ const TimeBox = () => {
 
   return (
     <div className="min-md:w-2/5 p-3 bg-[#ccc] shadow-lg/30 flex flex-col items-center rounded-2xl">
-      <h2 className="text-4xl font-bold my-5">Athens</h2>
+      <h2 className="text-4xl font-bold my-5 capitalize">{selector.title == '' ? "ahmedabad" : selector.title}</h2>
       <h2 className="text-5xl font-bold mb-2 text-center">{myTime}</h2>
       <span className="my-4 font-bold text-2xl">{myday.slice(0,11)}</span>
     </div>
