@@ -34,7 +34,7 @@ const News = () => {
         <div className="grid grid-cols-1 min-md:grid-cols-2 min-lg:grid-cols-4 gap-5">
           {FeaturedStories.data.map((item, i) => {
             return (
-              <div className="hover:shadow-2xl hover:p-3 rounded-2xl duration-200 cursor-pointer p-2">
+              <Link to={`/news/${item.id}`} className="hover:shadow-2xl hover:p-3 rounded-2xl duration-200 cursor-pointer p-2">
                 <div className="w-full mb-3">
                   <img className="m-auto rounded-2xl" src={item.cover} alt="" />
                 </div>
@@ -44,7 +44,7 @@ const News = () => {
                 <span className="text-gray-400 min-sm:flex min-sm:justify-center min-md:justify-start">
                   {item.time}
                 </span>
-              </div>
+              </Link>
             );
           })}
         </div>

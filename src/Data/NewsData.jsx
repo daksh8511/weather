@@ -21,7 +21,7 @@ export const TopStories = {
             thirdPara : "Storms on Monday night will focus on parts of western and central Texas to eastern New Mexico. In Texas, the threat will extend from the Big Bend area of the Rio Grande River to Interstate 40.",
             image : img1,
             cover : img1,
-            time : '12 Hour ago'
+            time : 'Updated 12 Hour ago'
         },
         {
             id : 2,
@@ -31,7 +31,7 @@ export const TopStories = {
             thirdPara : "May 5 (UPI) -- At least three people are dead with a handful of survivors reported after a boat washed ashore Monday morning in southern California. At least nine people are still missing.",
             image : img2,
             cover : img2,
-            time : '11 Hour ago'
+            time : 'Updated 11 Hour ago'
         },
         {
             id : 3,
@@ -41,7 +41,7 @@ export const TopStories = {
             thirdPara : "Where the sun manages to emerge for a few minutes or several hours on a given day, there is a moderate to high chance that it will lead to an eruption of showers and thunderstorms. This is because the air from 5,000 to 20,000 feet up is much colder than near the ground. So any warm thermals that rise into that progressively colder air can quickly condense into towering clouds and produce drenching showers and gusty thunderstorms.",
             image : vid3,
             cover : cover1,
-            time : '19 Hour ago'
+            time : 'Updated 19 Hour ago'
         },
         {
             id : 4,
@@ -51,7 +51,7 @@ export const TopStories = {
             thirdPara : "With repeat downpours in the forecast for much of this week, residents across eastern Texas and Louisiana are advised to monitor when the heaviest rounds may arrive. Intense and frequent rainfall could quickly spell trouble for travelers along portions of interstates 10, 20, 30 and 55.",
             image : vid4,
             cover : cover2,
-            time : '2 Day ago'
+            time : 'Updated 2 Day ago'
         }
     ]
 }
@@ -67,7 +67,7 @@ export const FeaturedStories = {
             thirdPara : "The video shows a coyote standing on the roof and drinking water that had collected on the glass skylight.",
             image : vid5,
             cover : cover3,
-            time : '1 Hour ago'
+            time : 'Updated 1 Hour ago'
         },
         {
             id : 2,
@@ -77,7 +77,7 @@ export const FeaturedStories = {
             thirdPara : "We’re not the first ones to biomineralize something and call it a building material. … But if you want to keep (the bacteria) alive for longer so that you can do more with them, there’s been some challenges involved to extend that viability,” Heveran said. “So that’s why we gave them fungal mycelium scaffolds, because the mycelium is really robust, and in nature, sometimes it biomineralizes (itself).",
             image : img4,
             cover : img4,
-            time : '2 Hour ago'
+            time : 'Updated 2 Hour ago'
         },
         {
             id : 3,
@@ -87,7 +87,7 @@ export const FeaturedStories = {
             thirdPara : "TSA: Passed by Congress in 2005, the REAL ID Act enacted the 9/11 Commission’s recommendation that the Federal Government “set standards for the issuance of sources of identification, such as driver’s licenses.” The Act established minimum security standards for state-issued driver’s licenses and identification cards and prohibits certain federal agencies from accepting for official purposes licenses and identification cards from states that do not meet these standards. These purposes are: Accessing certain federal facilities; boarding federally-regulated commercial aircraft; and entering nuclear power plants. Enforcement begins on May 7, 2025.",
             image : vid5,
             cover : cover4,
-            time : '12 Hour ago'
+            time : 'Updated 12 Hour ago'
         }
     ]
 }
