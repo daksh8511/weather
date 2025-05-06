@@ -10,7 +10,6 @@ import { useSelector } from "react-redux";
 const HourlyForecast = () => {
   const apikey = "1f50012cda2bc9fadd21081223e5ebb9";
   const selector = useSelector((state) => state.weather.title)
-  console.log(selector)
 
   const [data, setData] = useState(null);
 

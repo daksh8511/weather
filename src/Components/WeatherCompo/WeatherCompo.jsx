@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios, { Axios } from "axios";
-
 
 import TimeBox from "./TimeBox";
 import LiveWeather from "./LiveWeather";
@@ -8,6 +6,8 @@ import FiveDayForecast from "./FiveDayForecast";
 import HourlyForecast from "./HourlyForecast";
 
 const WeatherCompo = () => {
+  
+
   return (
     <div className="p-4 space-y-5">
       <div className="gap-3 min-md:flex">
