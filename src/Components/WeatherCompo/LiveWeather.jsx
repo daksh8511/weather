@@ -9,6 +9,7 @@ import snowy from "/assets/Snowy.png";
 import rainy from "/assets/Rainy.png";
 import rainythunder from "/assets/RainThunder.png";
 import partcloudy from "/assets/PartlyCloudy.png";
+import storm from "/assets/Storm.png";
 import { useSelector } from 'react-redux';
 
 const LiveWeather = () => {
@@ -19,7 +20,7 @@ const LiveWeather = () => {
 
   const fetchData = async () => {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${myTitle == "" ? 'ahmedabad' : myTitle}&units=metric&appid=${apikey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${myTitle == '' ? 'ahmedabad' : myTitle}&units=metric&appid=${apikey}`
     );
     const fetchData = await response.json();
     setData(fetchData);
@@ -28,7 +29,6 @@ const LiveWeather = () => {
   useEffect(() => {
     fetchData();
   }, [myTitle]);
-
 
   const timestamp = data?.sys?.sunrise;
   const getSunrise = new Date(timestamp * 1000);
@@ -84,6 +84,10 @@ const LiveWeather = () => {
                   ? rainythunder
                   : data?.weather?.[0]?.main == "Snow"
                   ? snowy
+                  : data?.weather?.[0]?.main == 'Mist' 
+                  ? rainy
+                  : data?.weather?.[0]?.main == 'Haze'
+                  ? storm
                   : {}
               }
               alt=""
@@ -100,6 +104,10 @@ const LiveWeather = () => {
                 ? "Thunderstorm"
                 : data?.weather?.[0]?.main == "Snow"
                 ? "Snow"
+                : data?.weather?.[0]?.main == "Mist" 
+                ? "Rain" 
+                : data?.weather?.[0]?.main == "Haze" ?
+                "Haze" 
                 : "Error"}
             </h2>
           </div>

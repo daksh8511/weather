@@ -4,15 +4,12 @@ import { useSelector } from "react-redux";
 const TimeBox = () => {
 
   const selector = useSelector((state) => state.weather)
-  console.log(selector.title)
 
   const [myTime, setTime] = useState([])
   const [myDate, setDate] = useState('')
 
   const day = new Date(myDate)
   const myday = day.toString()
-
-  console.log(myday.slice(0,10))
 
 
   const fetchTime = async () => {
@@ -24,7 +21,6 @@ const TimeBox = () => {
       }
     );
     const final = await response.json();
-    console.log(final);
     setTime(final.time_zone.time_12)
     setDate(final.time_zone.date)
   };
